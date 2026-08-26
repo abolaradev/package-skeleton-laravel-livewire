@@ -678,7 +678,7 @@ foreach ($files as $file) {
         str_contains($file, normalizePath('src/Commands/SkeletonCommand.php')) => rename($file, normalizePath('./src/Commands/'.$className.'Command.php')),
         str_contains($file, normalizePath('database/migrations/create_skeleton_table.php.stub')) => rename($file, normalizePath('./database/migrations/create_'.title_snake($packageSlugWithoutPrefix).'_table.php.stub')),
         str_contains($file, normalizePath('config/skeleton.php')) => rename($file, normalizePath('./config/'.$packageSlugWithoutPrefix.'.php')),
-        str_contains($file, normalizePath('routes/skeleton.php')) => rename($file, normalizePath('./config/'.$packageSlugWithoutPrefix.'.php')),
+        str_contains($file, normalizePath('routes/skeleton.php')) => rename($file, normalizePath('./routes/'.$packageSlugWithoutPrefix.'.php')),
         str_contains($file, 'README.md') => remove_readme_paragraphs($file),
         default => null,
     };
