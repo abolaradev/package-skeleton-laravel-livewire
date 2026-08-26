@@ -18,8 +18,11 @@ class SkeletonServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
- public function boot(): void
+    public function boot(): void
     {
+        // Load the package routes
+        $this->loadRoutesFrom(__DIR__.'/../routes/skeleton.php');
+
         // Load the package views
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'skeleton');
 
