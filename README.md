@@ -71,6 +71,7 @@ This template is based on [Spatie's Laravel Package Skeleton](https://github.com
 * Added support for package routes.
 * Added **Livewire** as a package dependency.
 * Added **Illuminate Support** as a package dependency
+* Integrated Workbench for developing and testing the package in a Laravel application environment.
 * Rewritten and customized `SkeletonServiceProvider.php`.
 * Added automatic generation of the package's `README.md` during the configuration process.
 
