@@ -56,8 +56,8 @@ Have fun creating your Laravel package. 🚀
 This template is based on [Spatie's Laravel Package Skeleton](https://github.com/spatie/package-skeleton-laravel) and includes a few minor customizations:
 
 * Added support for package routes.
-* Added support for **Livewire**.
-* Added support for **Illuminate Support**.
+* Added **Livewire** as a package dependency.
+* Added **Illuminate Support** as a package dependency
 * Rewritten and customized `SkeletonServiceProvider.php`.
 * Added automatic generation of the package's `README.md` during the configuration process.
 
