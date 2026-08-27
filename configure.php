@@ -277,15 +277,6 @@ function remove_prefix(string $prefix, string $content): string
     return $content;
 }
 
-
-function readmePackage(string $file){
-    $dir=__DIR__."/";
-    $readme_package_path=$dir."README_PACKAGE.md";
-    $readme_package=file_get_contents($file);
-    file_put_contents($file,$readme_package);
-    safeUnlink($readme_package_path);
-}
-
 function safeUnlink(string $filename): void
 {
     if (file_exists($filename) && is_file($filename)) {
@@ -678,10 +669,12 @@ foreach ($files as $file) {
         str_contains($file, normalizePath('database/migrations/create_skeleton_table.php.stub')) => rename($file, normalizePath('./database/migrations/create_'.title_snake($packageSlugWithoutPrefix).'_table.php.stub')),
         str_contains($file, normalizePath('config/skeleton.php')) => rename($file, normalizePath('./config/'.$packageSlugWithoutPrefix.'.php')),
         str_contains($file, normalizePath('routes/skeleton.php')) => rename($file, normalizePath('./routes/'.$packageSlugWithoutPrefix.'.php')),
-        str_contains($file, 'README.md') => readmePackage($file),
         default => null,
     };
 }
+
+safeUnlink('README.md');
+rename('README_PACKAGE.md','README.md');
 
 writeln(green('  ✓ Updated '.count($files).' files'));
 
