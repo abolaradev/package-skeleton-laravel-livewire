@@ -69,9 +69,8 @@ This command builds the Workbench environment and starts the Laravel development
 This template is based on [Spatie's Laravel Package Skeleton](https://github.com/spatie/package-skeleton-laravel) and includes a few minor customizations:
 
 * Added support for package routes.
-* Added support for **Livewire**.
-* Added support for **Illuminate Support**.
-* Integrated Workbench for developing and testing the package in a Laravel application environment.
+* Added **Livewire** as a package dependency.
+* Added **Illuminate Support** as a package dependency
 * Rewritten and customized `SkeletonServiceProvider.php`.
 * Added automatic generation of the package's `README.md` during the configuration process.
 
