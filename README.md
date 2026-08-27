@@ -1,42 +1,71 @@
-# :package_description
+# Package Skeleton Laravel Livewire
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![GitHub Tests Action Status](https://github.com/spatie/package-skeleton-laravel/actions/workflows/run-tests.yml/badge.svg)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://github.com/spatie/package-skeleton-laravel/actions/workflows/fix-php-code-style-issues.yml/badge.svg)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-<!--delete-->
----
-This repo can be used to scaffold a Laravel package. Follow these steps to get started:
+This repository is a customized Laravel package skeleton based on the excellent [Spatie Laravel Package Skeleton](https://github.com/spatie/package-skeleton-laravel).
 
-1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
+It includes a few small customizations to make the skeleton better suited for my Laravel package development workflow.
 
-   To run it unattended — from a script, or by handing it to a coding agent — pass `--no-interaction`
-   (`-n`) and the answers as options. It never prompts, and exits non-zero with a message naming any
-   option it still needs:
+## Getting Started
 
-   ```bash
-   php ./configure.php -n --vendor-name="Spatie" --package-name="laravel-ray"
-   ```
+Follow these steps to create a new Laravel package using this skeleton.
 
-   Run "php ./configure.php --help" for the full list of options.
-3. Have fun creating your package.
-4. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
----
-<!--/delete-->
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+### 1. Create a new repository
 
-## Support us
+Click the **"Use this template"** button at the top of this repository.
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/:package_name.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/:package_name)
+Then select **"Create a new repository"** and create a new repository for your package.
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
+### 2. Clone the repository
 
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+Clone the newly created repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/your-package.git
+```
+
+Then navigate into the package directory:
+
+```bash
+cd your-package
+```
+
+### 3. Configure the package
+
+Run the configuration script:
+
+```bash
+php configure.php
+```
+
+The script will ask for the required information and replace the placeholders throughout the package.
+
+
+To see all available options:
+
+```bash
+php configure.php --help
+```
+
+### 4. Start creating your package
+
+That's it! Your package is now ready for development.
+
+Have fun creating your Laravel package. 🚀
+
+## Customizations
+
+This template is based on [Spatie's Laravel Package Skeleton](https://github.com/spatie/package-skeleton-laravel) and includes a few minor customizations:
+
+* Added support for package routes.
+* Added support for **Livewire**.
+* Added support for **Illuminate Support**.
+* Rewritten and customized `SkeletonServiceProvider.php`.
+* Added automatic generation of the package's `README.md` during the configuration process.
+
+The goal is to keep the original structure and workflow of the Spatie skeleton while adding a few features that are useful for my own Laravel package development.
 
 ## Installation
 
-You can install the package via composer:
+You can install the package via Composer:
 
 ```bash
 composer require :vendor_slug/:package_slug
@@ -46,6 +75,11 @@ You can publish and run the migrations with:
 
 ```bash
 php artisan vendor:publish --tag=":package_slug-migrations"
+```
+
+Then run the migrations:
+
+```bash
 php artisan migrate
 ```
 
@@ -59,10 +93,11 @@ This is the contents of the published config file:
 
 ```php
 return [
+
 ];
 ```
 
-Optionally, you can publish the views using
+Optionally, you can publish the views using:
 
 ```bash
 php artisan vendor:publish --tag=":package_slug-views"
@@ -71,11 +106,14 @@ php artisan vendor:publish --tag=":package_slug-views"
 ## Usage
 
 ```php
-$:variable = new VendorName\Skeleton();
-echo $:variable->echoPhrase('Hello, VendorName!');
+$variable = new VendorName\Skeleton();
+
+echo $variable->echoPhrase('Hello, VendorName!');
 ```
 
 ## Testing
+
+Run the test suite with:
 
 ```bash
 composer test
@@ -91,12 +129,13 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+Please review [our security policy](../../security/policy) for information on how to report security vulnerabilities.
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
-- [All Contributors](../../contributors)
+* [Abolaradev](https://github.com/abolaradev)
+
+* [All Contributors](../../contributors)
 
 ## License
 
