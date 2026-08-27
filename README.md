@@ -51,6 +51,19 @@ That's it! Your package is now ready for development.
 
 Have fun creating your Laravel package. 🚀
 
+
+## Workbench
+
+This skeleton includes a Workbench environment for developing and testing your package inside a Laravel application.
+
+To start the Workbench development environment, run:
+
+```bash
+composer run serve
+```
+
+This command builds the Workbench environment and starts the Laravel development server. You can then use the Workbench application to develop and test your package in a real Laravel application environment.
+
 ## Customizations
 
 This template is based on [Spatie's Laravel Package Skeleton](https://github.com/spatie/package-skeleton-laravel) and includes a few minor customizations:
@@ -58,6 +71,7 @@ This template is based on [Spatie's Laravel Package Skeleton](https://github.com
 * Added support for package routes.
 * Added support for **Livewire**.
 * Added support for **Illuminate Support**.
+* Integrated Workbench for developing and testing the package in a Laravel application environment.
 * Rewritten and customized `SkeletonServiceProvider.php`.
 * Added automatic generation of the package's `README.md` during the configuration process.
 
