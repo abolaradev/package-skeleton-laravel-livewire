@@ -4,6 +4,8 @@ namespace VendorName\Skeleton;
 
 use Illuminate\Support\ServiceProvider;
 use VendorName\Skeleton\Commands\SkeletonCommand;
+use Workbench\App\Abolaradev\Livewire;
+use Illuminate\Support\Facades\Blade;
 
 class SkeletonServiceProvider extends ServiceProvider
 {
