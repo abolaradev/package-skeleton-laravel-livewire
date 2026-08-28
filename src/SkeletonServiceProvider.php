@@ -20,6 +20,16 @@ class SkeletonServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+
+        // Register the package views as a Livewire namespace
+        Livewire::addNamespace(
+            namespace: 'skeleton',
+            viewPath: __DIR__ . '/../resources/views',
+        );
+
+        // Register the package Blade components namespace
+        Blade::componentNamespace(__DIR__ . '/../resources/views/components','skeleton');
+
         // Load the package routes
         $this->loadRoutesFrom(__DIR__.'/../routes/skeleton.php');
 
