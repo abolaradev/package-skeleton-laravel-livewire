@@ -4,7 +4,7 @@ namespace VendorName\Skeleton;
 
 use Illuminate\Support\ServiceProvider;
 use VendorName\Skeleton\Commands\SkeletonCommand;
-use Workbench\App\Abolaradev\Livewire;
+use Livewire\Livewire;
 use Illuminate\Support\Facades\Blade;
 
 class SkeletonServiceProvider extends ServiceProvider
@@ -26,7 +26,7 @@ class SkeletonServiceProvider extends ServiceProvider
         // Register the package views as a Livewire namespace
         Livewire::addNamespace(
             namespace: 'skeleton',
-            viewPath: __DIR__ . '/../resources/views',
+            viewPath: __DIR__ . '/../resources/views/livewire',
         );
 
         // Register the package Blade components namespace
