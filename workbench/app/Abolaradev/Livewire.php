@@ -7,6 +7,8 @@ use Illuminate\Support\Str;
 use function Laravel\Prompts\alert;
 use function Laravel\Prompts\info;
 use function Laravel\Prompts\note;
+use function Orchestra\Sidekick\working_path;
+use function Orchestra\Testbench\workbench_path;
 
 class Livewire
 {
@@ -23,7 +25,7 @@ class Livewire
      */
     public static function setPath(): self
     {
-        self::$path = realpath(__DIR__ . '/../../..') . "\\resources\\views\\";
+        self::$path = working_path('resources\\views\\');
 
         return new self();
     }
@@ -117,7 +119,7 @@ class Livewire
                 ? 'blade'
                 : 'livewire');
 
-        $componentPath = Str::of(__DIR__ . "\\Livewire\\{$componentType}")
+        $componentPath = Str::of(workbench_path("app\\Abolaradev\\Livewire\\$componentType"))
                             ->finish('.blade.php');
 
         $content = file_get_contents($componentPath);
