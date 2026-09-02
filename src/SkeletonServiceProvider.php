@@ -14,7 +14,11 @@ class SkeletonServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-  
+        // Merge package configuration.
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/skeleton.php',
+            'package-skelton-laravel-livewire-2'
+        );
     }
 
     /**
