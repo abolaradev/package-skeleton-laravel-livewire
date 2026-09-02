@@ -39,7 +39,9 @@
         "psr-4": {
             "VendorName\\Skeleton\\": "src/",
             "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
-        }
+        },
+
+        "files":[]
     },
     "autoload-dev": {
         "psr-4": {
