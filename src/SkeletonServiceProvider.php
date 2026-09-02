@@ -57,6 +57,11 @@ class SkeletonServiceProvider extends ServiceProvider
             __DIR__.'/../resources/views' => resource_path('views/vendor/skeleton'),
         ], ['skeleton', 'skeleton-views']);
 
+        // Publish the package assets
+        $this->publishes([
+            __DIR__.'/../resources/dist' => public_path('vendor/skeleton'),
+        ], ['skeleton', 'skeleton-assets']);
+
         // Publish the package migrations
         $this->publishesMigrations([
             __DIR__.'/../database/migrations' => database_path('migrations'),
