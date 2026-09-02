@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Artisan;
 use Workbench\App\Abolaradev\Livewire;
+use Workbench\App\Abolaradev\Helper;
+
 
 Artisan::command('livewire:layout {layout?}',function(string $layout = ''){
     $layout = empty($layout) ? 'app'
@@ -70,3 +72,9 @@ Artisan::command('make:component {component}',function(string $component){
     );
 
 })->purpose('Create a new Blade component');
+
+Artisan::command('make:helper',function(){
+    Helper::make()
+          ->composer()
+          ->dumpAutoLoad();
+})->purpose('Create helper file');
