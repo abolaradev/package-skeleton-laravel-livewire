@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Artisan;
+use Workbench\App\Abolaradev\Asset;
 use Workbench\App\Abolaradev\Livewire;
 use Workbench\App\Abolaradev\Helper;
 
@@ -78,3 +79,19 @@ Artisan::command('make:helper',function(){
           ->composer()
           ->dumpAutoLoad();
 })->purpose('Create helper file');
+
+Artisan::command('make:assets {--except=?}', function () {
+
+    $except = explode(',', $this->option('except'));
+
+    Asset::make($except)
+        ->createHelperAsset();
+
+})->purpose('Create package assets');
+
+
+Artisan::command('assets:link', function () {
+
+    Asset::link();
+
+})->purpose('Link package assets to the public directory');
