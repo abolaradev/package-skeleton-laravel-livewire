@@ -19,7 +19,7 @@ Artisan::command('livewire:layout {layout?}',function(string $layout = ''){
         fail: 'Livewire layout is exist'
     );
 
-});
+})->purpose('Create a new Livewire layout');
 
 
 Artisan::command('make:livewire {component}',function(string $component){
@@ -40,14 +40,14 @@ Artisan::command('make:livewire {component}',function(string $component){
         fail: 'Livewire Component is exist'
     );
 
-});
+})->purpose('Create a new Livewire component');
 
 
 Artisan::command('livewire:make {component}', function (string $component){
     $this->call('make:livewire',[
         'component' => $component
     ]);
-});
+})->purpose('Create a new Livewire component');
 
 
 Artisan::command('make:component {component}',function(string $component){
@@ -69,4 +69,4 @@ Artisan::command('make:component {component}',function(string $component){
         fail: 'Blade Component is exist'
     );
 
-});
+})->purpose('Create a new Blade component');
